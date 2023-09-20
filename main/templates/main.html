@@ -17,8 +17,6 @@
             <th>Date Added</th>
         </tr>
 
-        {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-
         {% for product in products %}
             <tr>
                 <td>{{product.name}}</td>
@@ -36,4 +34,10 @@
             Add New Product
         </button>
     </a>
+    <a href="{% url 'main:logout' %}">
+        <button>
+            Logout
+        </button>
+    </a><br>
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
 {% endblock content %}
